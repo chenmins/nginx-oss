@@ -4,7 +4,7 @@
 mkdir -p /usr/share/nginx/html/abc
 chown -R nginx:nginx /usr/share/nginx/html/abc
 chmod -R 755 /usr/share/nginx/html/abc
-rclone mount minio:/abc /usr/share/nginx/html/abc --vfs-cache-mode full --rc --daemon
+rclone mount minio:/abc /usr/share/nginx/html/abc --vfs-cache-mode full --rc  &
 
 # 启动 Nginx
 nginx -g 'daemon off;'
